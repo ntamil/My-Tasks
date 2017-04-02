@@ -1,0 +1,2 @@
+# quintype
+Quintype News App
