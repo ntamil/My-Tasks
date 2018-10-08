@@ -1,0 +1,99 @@
+.profileForm {
+margin : 25px 25px;
+}
+
+.captchaBox {
+float:left;
+margin-left : -15px;
+}
+
+.logoutMenu {
+float:right !important;
+}
+
+dl , dt , dd {
+ display: table;
+}
+
+.dl-horizontal dt {
+    clear: left;
+    float: left;
+    overflow: hidden;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 160px;
+}
+
+.ratingLabel {
+	margin-top:13px;
+}
+.starrate {
+  font-size: 20px;
+  text-align: left;
+  float: left;
+  width: 200px;
+}
+.starrate i {
+  color: #aaaaaa;
+}
+.starrate .active i {
+  color: #90cd9c;
+}
+.starrate .rating {
+  border: medium none;
+  float: left; 
+}
+.starrate .rating > input {
+  display: none;
+}
+.starrate .rating > label:before {
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.starrate .rating > .half:before {
+  content: "\f089";
+  position: absolute;
+}
+
+.starrate .rating > label {
+  color: #ddd;
+  float: right;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.starrate .rating > input:checked ~ label,
+/* show gold star when clicked */
+.starrate .rating:not(:checked) > label:hover,
+/* hover current star */
+.starrate .rating:not(:checked) > label:hover ~ label {
+  color: #90cd9c;
+} /* hover previous stars in list */
+
+.starrate .rating > input:checked + label:hover,
+/* hover current star when changing rating */
+.starrate .rating
+  > input:checked
+  ~ label:hover,
+.starrate .rating > label:hover ~ input:checked ~ label,
+/* lighten current selection */
+.starrate .rating > input:checked ~ label:hover ~ label {
+  color: #90cd9c;
+}
+
+
+.disInactive {
+display:none;
+}
+.disActive {
+display:block;
+}
+
+.rateItBtn {
+margin-top: 19px;
+}
